@@ -6,21 +6,40 @@ namespace BasicProgram
     {
         static void Main(string[] args)
         {
-            char ch;
-            Console.WriteLine("Enter the alphabet:");
-            ch = Convert.ToChar(Console.ReadLine());
-            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'|| ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            //local variables
+            int a, b, c;
+            Console.WriteLine("largest among three numbers:");
+            //reading inputs
+            Console.WriteLine("Enter value for a :");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for b:");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for c:");
+            c = Convert.ToInt32(Console.ReadLine());
+            //finding largest among three numbers
+            if((a>b)&&(a>c))
             {
-                Console.WriteLine("{0} is vowel", ch);
+                Console.WriteLine("{0} is largest value", a);
             }
-            else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='z'))
+            else if((b>a)&&(b>c))
             {
-                Console.WriteLine("{0} is consonant", ch);
+                Console.WriteLine("{0} is largest value", b);
+            }
+            else
+            {
+                Console.WriteLine("{0} is largest value", c);
+
             }
             Console.ReadLine();
-
-
-
         }
+
+
+
+
+          
+
+
+
+        
     }
 }
