@@ -6,16 +6,22 @@ namespace BasicProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the year:");
-            int year = Convert.ToInt32(Console.ReadLine());
-            if ((year%4==0)&&(year%100!=0)||(year%400==0))
+            int number, b;
+            Console.WriteLine("Enter the number to find prime factor:");
+            number= Convert.ToInt32(Console.ReadLine());
+            for(b=1;b<=number;b++)
             {
-                Console.WriteLine("{0} is leap year", year);
+                if(number%b==0)
+                {
+                    
+                    Console.WriteLine("{0} is the prime factor of {1}", b, number);
+                }
+                
             }
-            else
-            {
-                Console.WriteLine("{0} is not a leap year ", year);
-            }
+            Console.ReadLine();
+
+
+
         }
     }
 }
