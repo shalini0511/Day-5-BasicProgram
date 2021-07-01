@@ -6,17 +6,16 @@ namespace BasicProgram
     {
         static void Main(string[] args)
         {
-            int number, b;
-            Console.WriteLine("Enter the number to find prime factor:");
-            number= Convert.ToInt32(Console.ReadLine());
-            for(b=1;b<=number;b++)
+            char ch;
+            Console.WriteLine("Enter the alphabet:");
+            ch = Convert.ToChar(Console.ReadLine());
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'|| ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
             {
-                if(number%b==0)
-                {
-                    
-                    Console.WriteLine("{0} is the prime factor of {1}", b, number);
-                }
-                
+                Console.WriteLine("{0} is vowel", ch);
+            }
+            else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='z'))
+            {
+                Console.WriteLine("{0} is consonant", ch);
             }
             Console.ReadLine();
 
